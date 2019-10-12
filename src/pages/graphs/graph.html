@@ -1,0 +1,32 @@
+<ion-header color="warning" class="nav">
+
+    <ion-navbar background-color="warning" class="nav">
+    <ion-title>Graphs and Data</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      Last Active Location: {{getlastLoc()}}
+    </ion-item>
+    <ion-item>
+      Time since last Detection: {{getTimeMotion()}}
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-content>
+      <p *ngIf="!showChart()">No motion detect as of yet</p>
+      <canvas #chartCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-content>
+      <p *ngIf="!showChart()">No motion detect as of yet</p>
+      <canvas #chartCanvas2></canvas>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
